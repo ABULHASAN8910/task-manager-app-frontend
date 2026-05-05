@@ -1,16 +1,53 @@
-# React + Vite
+# Task Manager Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This frontend is the React + Vite application for the Task Manager project.
+It provides a polished user interface for authentication, dashboard analytics, project creation, task management, and team chat.
 
-Currently, two official plugins are available:
+## 🌟 What’s included
+- Login and signup pages with JWT-based authentication flow
+- Dashboard view with project/task summaries and status badges
+- Project creation form and project list
+- Task creation and status update workflow
+- Team chat interface for sending and viewing messages
+- Dark UI theme with animated page transitions and responsive layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧱 Tech stack
+- React 19
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Axios for API communication
 
-## React Compiler
+## 📁 Key files
+- `src/App.jsx` — app routing and public/protected route handling
+- `src/api.js` — Axios client configured for backend API requests
+- `src/context/AuthContext.jsx` — authentication context and `localStorage` persistence
+- `src/components/Sidebar.jsx` — sidebar navigation for authenticated users
+- `src/pages/Login.jsx` — login form and error handling
+- `src/pages/Signup.jsx` — signup form and server message display
+- `src/pages/Dashboard.jsx` — project/task summary cards and admin role display
+- `src/pages/Projects.jsx` — project creation and listing UI
+- `src/pages/Tasks.jsx` — task creation and status controls
+- `src/pages/Chat.jsx` — team chat feed and message input
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Run locally
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open the Vite URL in your browser (usually `http://localhost:5173`).
 
-## Expanding the ESLint configuration
+## 💡 Notes
+- The frontend loads data from the backend through authenticated API calls.
+- Protected routes are only accessible after login.
+- Message and error states are shown inline for better user experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Presentation tips
+- Highlight the seamless transition between login/signup and protected routes
+- Demonstrate data fetching on the dashboard and project/task pages
+- Show the live chat flow as part of team collaboration
+
+---
+
+This frontend pairs with the Node.js backend to form a complete task management experience.
